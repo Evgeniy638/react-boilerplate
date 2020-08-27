@@ -3,13 +3,12 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
     entry: "./src/index.js",
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "index-bundle.js"
     },
-    devtool: 'nline-source-map',
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html"
